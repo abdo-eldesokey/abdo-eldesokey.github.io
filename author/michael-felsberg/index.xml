@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael Felsberg | Abdelrahman Eldesokey&#39;s Personal Website</title>
+    <link>/author/michael-felsberg/</link>
+      <atom:link href="/author/michael-felsberg/index.xml" rel="self" type="application/rss+xml" />
+    <description>Michael Felsberg</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hubad79a3e41ffd8530ab094e663dbe087_35772_512x512_fill_lanczos_center_2.png</url>
+      <title>Michael Felsberg</title>
+      <link>/author/michael-felsberg/</link>
+    </image>
+    
+    <item>
+      <title>Confidence Propagation through CNNs for Guided Sparse Depth Regression</title>
+      <link>/publication/pami2019/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/pami2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
