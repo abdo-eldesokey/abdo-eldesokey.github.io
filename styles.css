@@ -1,0 +1,741 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-bg: #f5f5f5;
+    --dark-bg: #ecf0f1;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+    --sidebar-width: 300px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 2rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.profile h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+/* Social links styling - updated icon size */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.8rem; /* Increased from 1.5rem */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+social-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1); /* Add slight scaling effect on hover */
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    background-color: var(--primary-color);
+}
+
+/* Main Content Styles */
+.content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+}
+
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Change h2 color to lighter blue */
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #4dabf7; /* Changed from var(--primary-color) to a lighter blue */
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #4dabf7; /* Changed underline color to match */
+}
+
+.section p {
+    margin-bottom: 1rem;
+}
+
+/* Publications styles */
+.publication {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.publication h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.publication h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.authors {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.venue {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.pub-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.pub-link {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.pub-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Update image sizing and fit for publication cards */
+.pub-image {
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    height: 200px; /* Fixed height for consistency */
+    overflow: cover;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+.pub-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover ensures the image fills the container while maintaining aspect ratio */
+    object-position: center; /* Center the image within the container */
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Add a subtle zoom effect on hover for better user interaction */
+.publication:hover .pub-image img {
+    transform: scale(1.05);
+}
+
+/* Add these styles for the venue ribbon */
+.venue-ribbon {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background-color: rgba(100, 100, 101, 0.85); /* Using secondary-color with transparency */
+    color: white;
+    padding: 5px 15px;
+    font-size: 1.0rem;
+    font-weight: 600;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Optional: Add a special color for top-tier venues
+.publication:nth-child(1) .venue-ribbon,
+.publication:nth-child(2) .venue-ribbon,
+.publication:nth-child(3) .venue-ribbon {
+    background-color: rgba(168, 168, 168, 0.85); /* primary-color with transparency */
+} */
+
+/* Make sure the ribbon stays visible when hovering */
+.publication:hover .venue-ribbon {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* Teaching styles */
+.course {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.course h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.course-info {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+/* Contact styles */
+.contact-info {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 1rem;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #4dabf7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #1c7ed6;
+    text-decoration: underline;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 4px
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .content {
+        margin-left: 0;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Subsection styling for the merged sections */
+.subsection {
+    margin-bottom: 3rem;
+}
+
+.subsection h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.subsection h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* Update course styling for the merged view */
+.teaching-list {
+    margin-top: 1.5rem;
+}
+
+.course h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Add a divider between the biography and teaching sections */
+.subsection.teaching {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.subsection.biography {
+    position: relative;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1.5rem;
+}
+
+.subsection.expertise {
+    position: relative;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1.5rem;
+}
+/* Education list styling */
+.education-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.education-list li {
+    margin-bottom: 1.5rem;
+    background-color: white;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.education-list li strong {
+    display: block;
+    color: var(--secondary-color);
+    margin-bottom: 0.3rem;
+}
+
+.education-list li em {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Awards section styling */
+.awards-section {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.awards-section h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.awards-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.awards-list {
+    padding-left: 1.2rem;
+}
+
+.awards-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Teaching subsections */
+.subsection.current, .subsection.previous, .subsection.supervision {
+    margin-bottom: 2.5rem;
+}
+
+.subsection.current h3, .subsection.previous h3, .subsection.supervision h3 {
+    margin-bottom: 1.2rem;
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.subsection.current h3::after, .subsection.previous h3::after, .subsection.supervision h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.subsection.supervision p {
+    background-color: white;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.subsection.supervision a {
+    color: #4dabf7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.subsection.supervision a:hover {
+    color: #1c7ed6;
+    text-decoration: underline;
+}
+
+/* Add these styles to modify hyperlinks */
+
+/* Global link styling */
+a {
+    color: #4dabf7;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #1c7ed6;
+}
+
+/* Keep the special styling for publication links */
+.pub-link {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.pub-link:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Reset the color for links in the contact section */
+.contact-info a {
+    color: #4dabf7;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #1c7ed6;
+}
+
+/* Style for links in the supervision section */
+.subsection.supervision a {
+    color: #4dabf7;
+    text-decoration: none;
+}
+
+.subsection.supervision a:hover {
+    color: #1c7ed6;
+}
+
+/* Add these styles for the updates section */
+
+.subsection.updates {
+    position: relative;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1.5rem;
+}
+
+.update-list {
+    margin-top: 1rem;
+    position: relative;
+}
+
+.update-item {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.75rem; /* Reduced margin */
+    padding: 0.75rem; /* Reduced padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.update-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.update-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+}
+
+.update-item.paper-accepted::before {
+    background-color: #4caf50; /* Green */
+}
+
+.update-item.invited-talk::before {
+    background-color: #ff9800; /* Orange */
+}
+
+.update-item.new-preprint::before {
+    background-color: #2196f3; /* Blue */
+}
+
+.update-item.collaboration::before {
+    background-color: #9c27b0; /* Purple */
+}
+
+.update-icon {
+    margin-right: 1rem; /* Reduced margin */
+    color: var(--secondary-color);
+    font-size: 1.5rem; /* Reduced size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px; /* Reduced width */
+}
+
+.update-content {
+    flex: 1;
+}
+
+.update-content h4 {
+    font-size: 1rem; /* Reduced size */
+    margin-bottom: 0.25rem; /* Reduced margin */
+    color: var(--secondary-color);
+}
+
+.update-content p {
+    margin-bottom: 0.25rem; /* Reduced margin */
+    line-height: 1.4; /* More compact line height */
+    font-size: 0.95rem; /* Slightly smaller font */
+}
+
+.update-date {
+    display: block;
+    margin-top: 0.25rem; /* Reduced margin */
+    font-size: 0.8rem; /* Reduced size */
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Add pagination controls */
+.update-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.update-nav-button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.update-nav-button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.update-nav-button:disabled {
+    opacity: 0.5;
+    cursor: default;
+    box-shadow: none;
+}
+
+.update-nav-button i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.update-page-indicator {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Hide updates beyond the first 5 */
+.update-item.hidden {
+    display: none;
+}
+
+/* Add styling for update links */
+.update-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.update-link i {
+    font-size: 0.7rem;
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+}
+
+.update-link:hover {
+    color: var(--secondary-color);
+}
+
+.update-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Add highlight animation for linked publications */
+@keyframes highlight-publication {
+    0% { box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+    50% { box-shadow: 0 0 20px var(--primary-color); }
+    100% { box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+}
+
+.publication.highlight {
+    animation: highlight-publication 2s ease;
+}

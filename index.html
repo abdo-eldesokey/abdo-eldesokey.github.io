@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Abdelrahman Eldesokey - Academic Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="assets/profile.jpeg" alt="Abdelrahman Eldesokey">
+                </div>
+                <h1>Abdelrahman Eldesokey, PhD</h1>
+                <h2>Postdoctoral Researcher at KAUST, Saudi Arabia</h2>
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?user=9tP8jsUAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://github.com/abdo-eldesokey" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://eg.linkedin.com/in/abdoeldesokey" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="assets/cv.pdf" target="_blank" title="Curriculum Vitae">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#about" class="active">About</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="about" class="section active">                
+                <div class="subsection biography">
+                    <h3>Biography</h3>
+                    <p>I am a Postdoctoral Fellow at King Abdullah University of Science and Technology (KAUST), Saudi Arabia, specializing in Generative AI.
+                    I obtained my Ph.D. degree in Computer Vision and Deep Learning from <a href="https://liu.se/" target="_blank">Linköping University</a>,
+                     Sweden under the supervision of <a href="https://scholar.google.com/citations?user=lkWfR08AAAAJ&hl=en" target="_blank">Prof. Michael Felsberg</a> 
+                     and <a href="https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en" target="_blank">Prof. Fahad Shahbaz Khan</a>.</p>
+                    <p>I have 11 years of diverse interdisciplinary experience through academic and industrial roles across Sweden, Egypt, and Saudi Arabia.</p> 
+                </div>
+                
+                <div class="subsection biography">    
+                    <h3>Areas of Expertise</h3>
+                    <span class="tag"> Diffusion Models </span>
+                    <span class="tag"> Vision Foundation Models </span>
+                    <span class="tag"> Large Language Models (LLM) </span>
+                    <span class="tag"> Retrieval-Augmented Generation (RAG) </span>
+                    <span class="tag"> Multi-Agentic Systems</span>
+                    <span class="tag"> Image/Video Object Detection/Segmentation/Tracking </span>
+                    <span class="tag"> Depth Estimation/Completion </span>
+                    <span class="tag"> Uncertainty in Deep Learning </span>
+                    <span class="tag"> Optical Flow Estimation </span>
+                    <span class="tag"> AI for Sports </span>
+                </div>
+                
+                <div class="subsection updates">    
+                    <h3>Updates</h3>
+                    <div class="update-list" id="update-list">
+                        <div class="update-item paper-accepted">
+                            <span class="update-icon"><i class="fas fa-award"></i></span>
+                            <div class="update-content">
+                                <h4>Paper Accepted at SIGGRAPH 2025</h4>
+                                <p>"PartEdit: Fine-Grained Image Editing using Pre-Trained Diffusion Models" will be presented at SIGGRAPH 2025 in Vancouver, Canada.</p>
+                                <span class="update-date">March 2025</span>
+                                <a href="#publications" class="update-link" data-publication="partedit">View Publication <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="update-item new-preprint">
+                            <span class="update-icon"><i class="fas fa-file-alt"></i></span>
+                            <div class="update-content">
+                                <h4>New Preprint Released</h4>
+                                <p>Published a new paper on Retrieval-Augmented Generation (RAG) techniques for vision-language models.</p>
+                                <span class="update-date">February 2024</span>
+                                <a href="#publications" class="update-link" data-publication="zero-shot-video">View Publication <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="update-item paper-accepted">
+                            <span class="update-icon"><i class="fas fa-award"></i></span>
+                            <div class="update-content">
+                                <h4>Paper Accepted at ICLR 2025</h4>
+                                <p>"Build-A-Scene: Interactive 3D Layout Control for Diffusion-Based Image Generation" will be presented at ICLR 2025 in Singapore.</p>
+                                <span class="update-date">Jan 2025</span>
+                                <a href="#publications" class="update-link" data-publication="build-a-scene">View Publication <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item paper-accepted">
+                            <span class="update-icon"><i class="fas fa-award"></i></span>
+                            <div class="update-content">
+                                <h4>Paper Accepted at CVPR 2025</h4>
+                                <p>"Zero-Shot Video Semantic Segmentation based on Pre-Trained Diffusion Models" will be presented at CVPR 2025 in Nashville, USA.</p>
+                                <span class="update-date">Jan 2025</span>
+                                <a href="#publications" class="update-link" data-publication="zero-shot-video">View Publication <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="update-item invited-talk">
+                            <span class="update-icon"><i class="fas fa-microphone"></i></span>
+                            <div class="update-content">
+                                <h4>Invited Talk</h4>
+                                <p>Presented our latest research on diffusion models at the Generative AI Summit 2024.</p>
+                                <span class="update-date">March 2024</span>
+                            </div>
+                        </div> -->
+                        <!-- <div class="update-item collaboration">
+                            <span class="update-icon"><i class="fas fa-users"></i></span>
+                            <div class="update-content">
+                                <h4>New Collaboration</h4>
+                                <p>Leading a multi-institutional project on Vision Foundation Models with partners from academia and industry.</p>
+                                <span class="update-date">January 2024</span>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                    <div class="update-navigation">
+                        <button class="update-nav-button" id="prev-updates" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <span class="update-page-indicator">Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
+                        <button class="update-nav-button" id="next-updates">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="publications" class="section">
+                <h2>Publications</h2>
+                <div class="publication-list">
+                    <div class="publication" id="build-a-scene">
+                        <div class="pub-image">
+                            <div class="venue-ribbon">ICLR 2025</div>
+                            <img src="https://github.com/abdo-eldesokey/build-a-scene/raw/gh-page/static/images/teaser.jpg" alt="Build-A-Scene">
+                        </div>
+                        <h4>Build-A-Scene: Interactive 3D Layout Control for Diffusion-Based Image Generation</h4>
+                        <p class="authors">Abdelrahman Eldesokey, Peter Wonka</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2408.14819" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://abdo-eldesokey.github.io/build-a-scene/" class="pub-link" target="_blank">Project Page</a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="publication" id="edit-clip">
+                        <div class="pub-image">
+                            <div class="venue-ribbon">Pre-Print 2025</div>
+                            <img src="https://qianwangx.github.io/EditCLIP/static/images/teaser_editclip.png" alt="edit-clip">
+                        </div>
+                        <h4>EditCLIP: Representation Learning for Image Editing</h4>
+                        <p class="authors">Qian Wang, Aleks Cvejic, Abdelrahman Eldesokey, Peter Wonka</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2503.20318" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://qianwangx.github.io/EditCLIP/" class="pub-link" target="_blank">Project Page</a>
+                        </div>
+                    </div>
+                    
+                    <div class="publication" id="partedit">
+                        <div class="pub-image">
+                            <div class="venue-ribbon">SIGGRAPH 2025</div>
+                            <img src="https://partedit.github.io/PartEdit/static/figures/teaser.png" alt="Interactive 3D Layout Control">
+                        </div>
+                        <h4>PartEdit: Fine-Grained Image Editing using Pre-Trained Diffusion Models
+                        </h4>
+                        <p class="authors">Aleks Cvejic*, Abdelrahman Eldesokey*, Peter Wonka</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2502.04050" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://partedit.github.io/PartEdit/" class="pub-link" target="_blank">Project Page</a>
+                        </div>
+                    </div>
+                    
+                    <div class="publication" id="zero-shot-video">
+                        <div class="pub-image">
+                            <div class="venue-ribbon">CVPR 2025</div>
+                            <img src="https://github.com/QianWangX/VidSeg_diffusion/raw/main/assets/teaser_vidseg.png" alt="Zero-Shot Video Semantic Segmentation">
+                        </div>
+                        <h4>Zero-Shot Video Semantic Segmentation based on Pre-Trained Diffusion Models</h4>
+                        <p class="authors">Qian Wang, Abdelrahman Eldesokey, Mohit Mendiratta, Fangneng Zhan, Adam Kortylewski, Christian Theobalt, Peter Wonka</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2405.16947" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://qianwangx.github.io/VidSeg_diffusion/" class="pub-link" target="_blank">Project Page</a>
+                        </div>
+                    </div>
+                    
+                    <div class="publication" id="latentman">
+                        <div class="pub-image">
+                            <div class="venue-ribbon">CVPRW 2024</div>
+                            <img src="https://raw.githubusercontent.com/abdo-eldesokey/text2ac-zero/gh-page/static/images/method.jpg" alt="LATENTMAN">
+                        </div>
+                        <h4>LATENTMAN: Generating Consistent Animated Characters using Image Diffusion Models</h4>
+                        <p class="authors">Abdelrahman Eldesokey, Peter Wonka</p>
+                        <div class="pub-links">
+                            <a href="https://openaccess.thecvf.com/content/CVPR2024W/GCV/papers/Eldesokey_LATENTMAN_Generating_Consistent_Animated_Characters_using_Image_Diffusion_Models_CVPRW_2024_paper.pdf" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://abdo-eldesokey.github.io/latentman/" class="pub-link" target="_blank">Project Page</a>
+                        </div>
+                    </div>
+                    
+                    <div class="publication" id="uncertainty-aware">
+                        <div class="pub-image">
+                            <div class="venue-ribbon">CVPR 2021</div>
+                            <img src="https://github.com/abdo-eldesokey/pncnn/raw/master/imgs/teaser2.gif" alt="Uncertainty-Aware CNNs">
+                        </div>
+                        <h4>Uncertainty-Aware CNNs for Depth Completion: Uncertainty from Beginning to End</h4>
+                        <p class="authors">Abdelrahman Eldesokey, Michael Felsberg, Karl Holmquist, Mikael Persson</p>
+                        <div class="pub-links">
+                            <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Eldesokey_Uncertainty-Aware_CNNs_for_Depth_Completion_Uncertainty_from_Beginning_to_End_CVPR_2020_paper.pdf" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://www.youtube.com/watch?v=Iw_yk-UoKEo" class="pub-link" target="_blank">Video</a>
+                        </div>
+                    </div>
+                    
+                  
+                </div>
+            </section>
+            
+            <section id="teaching" class="section">
+                <h2>Teaching</h2>
+                <div class="teaching-list">
+                    <div class="subsection current">
+                        <h3>Current Teaching - KAUST (2023-Present)</h3>
+                        <div class="course">
+                            <h4>Deep Learning</h4>
+                            <p class="course-info">KAUST, MSc level</p>
+                        </div>
+                        <div class="course">
+                            <h4>Generative AI</h4>
+                            <p class="course-info">KAUST, MSc level</p>
+                        </div>
+                    </div>
+                    
+                    <div class="subsection previous">
+                        <h3>Previous Teaching - Linköping University (2016-2021)</h3>
+                        <div class="course">
+                            <h4>TSBB08 Digital Image Processing</h4>
+                            <p class="course-info">Linköping University, BSc level</p>
+                        </div>
+                        <div class="course">
+                            <h4>TSBB09 Image Sensors</h4>
+                            <p class="course-info">Linköping University, BSc level</p>
+                        </div>
+                        <div class="course">
+                            <h4>TSBB31 Medical Images</h4>
+                            <p class="course-info">Linköping University, BSc level</p>
+                        </div>
+                        <div class="course">
+                            <h4>TSBB06 Multidimensional Signal Analysis</h4>
+                            <p class="course-info">Linköping University, MSc level</p>
+                        </div>
+                        <div class="course">
+                            <h4>TBMI26 Neural Networks and Learning Systems</h4>
+                            <p class="course-info">Linköping University, MSc level</p>
+                        </div>
+                        <div class="course">
+                            <h4>TSBB17 Visual Object Recognition and Detection</h4>
+                            <p class="course-info">Linköping University, MSc level</p>
+                        </div>
+                    </div>
+                    
+                    <div class="subsection supervision">
+                        <h3>Student Supervision</h3>
+                        <p>I have supervised more than 20 postgraduate students on various thesis topics in computer vision, deep learning, and generative AI. A selection of supervised theses can be found on my <a href="https://liu.diva-portal.org/smash/resultList.jsf?dswid=9042&af=%5B%22publicationTypeCode%3AstudentThesis%22%5D&p=1&fs=true&language=en&searchType=SIMPLE&query=abdelrahman+eldesokey&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all" target="_blank">university profile</a>.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="contact" class="section">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> Email: <i>firstname.lastname@kaust.edu.sa</i></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Location: KAUST, Saudi Arabia</p>
+                    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://eg.linkedin.com/in/abdoeldesokey" target="_blank">Abdelrahman Eldesokey</a></p>
+                    <p><i class="fas fa-graduation-cap"></i> Google Scholar: <a href="https://scholar.google.com/citations?user=9tP8jsUAAAAJ&hl=en" target="_blank">Abdelrahman Eldesokey</a></p>
+                </div>
+                
+                <div class="awards-section">
+                    <h3>Awards and Honors</h3>
+                    <ul class="awards-list">
+                        <li>Best Paper Award at VISAPP conference (2021)</li>
+                        <li>Affiliation to the Wallenberg AI, Autonomous Systems and Software Program (2017)</li>
+                        <li>Graduate Scholarship from Nile University for master's degree (2013)</li>
+                        <li>Honor award for outstanding performance in BSc from Mansoura University (2011)</li>
+                        <li>One of the Top 10 BSc graduation projects in Egypt by IEEE Gold (2011)</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
