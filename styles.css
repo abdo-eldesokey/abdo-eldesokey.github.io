@@ -729,6 +729,31 @@ a:hover {
     transform: translateX(3px);
 }
 
+/* Add styling for update links */
+.external-link {    
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.external-link i {
+    font-size: 0.7rem;
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+}
+
+.external-link:hover {
+    color: var(--secondary-color);
+}
+
+.external-link:hover i {
+    transform: translateX(3px);
+}
+
+
 /* Add highlight animation for linked publications */
 @keyframes highlight-publication {
     0% { box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
